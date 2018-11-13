@@ -1,0 +1,17 @@
+header{
+	background-image: url(https://img.freepik.com/free-vector/geometric-grey-background_1055-3147.jpg?size=338&ext=jpg);
+	background-size: cover;
+	height: 150px;
+}
+ h1{
+	margin: auto;
+	text-align: center;	
+	padding-top: 48px;
+}
+#first{
+	display: flex;
+}
+.add{
+	display: flex;
+}
+
