@@ -32,6 +32,25 @@ test('deleteTodo test', function (t) {
     t.end();
 });
 
+test('markTodo test', function (t) {
+    let result = testArray = [
+        {
+            id: 0,
+            description: 'smash avocados',
+            done: false,
+        },
+        {
+            id: 1,
+            description: 'make coffee',
+            done: false,
+        }
+    ];
+    t.deepEqual(logic.markTodo(testArray, 0), result, 'Todo done is not toggeled');
+    t.deepEqual(logic.markTodo(testArray, 5), testArray, 'Should handle missing ids');
+
+    t.end();
+});
+
 // Do addTodo tests here
 
 
