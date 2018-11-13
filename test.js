@@ -1,37 +1,19 @@
 var tape = require('tape');
 var logic = require('./logic');
-var testArray = [
-    {
-        id: 0,
-        description: 'smash avocados',
-        done: true,
-    },
-    {
-        id: 1,
-        description: 'make coffee',
-        done: false,
-    }
-];
 
-var testArr=[
-  {
-    id: 0,
-    description: 'smash avocados',
-    done: true,
-  },
-  {
-    id: 1,
-    description: 'make coffee',
-    done: false,
-  },
-];
-
-tape('Example test', function (t) {
-    t.pass();
-    t.end();
-});
-
-test('deleteTodo test', function (t) {
+tape('deleteTodo test', function (t) {
+    let testArray = [
+        {
+            id: 0,
+            description: 'smash avocados',
+            done: true,
+        },
+        {
+            id: 1,
+            description: 'make coffee',
+            done: false,
+        }
+    ];
     let result = [
         {
             id: 1,
@@ -45,8 +27,20 @@ test('deleteTodo test', function (t) {
     t.end();
 });
 
-test('markTodo test', function (t) {
-    let result = testArray = [
+tape('markTodo test', function (t) {
+    let testArray = [
+        {
+            id: 0,
+            description: 'smash avocados',
+            done: true,
+        },
+        {
+            id: 1,
+            description: 'make coffee',
+            done: false,
+        }
+    ];
+    let result = [
         {
             id: 0,
             description: 'smash avocados',
@@ -64,48 +58,16 @@ test('markTodo test', function (t) {
     t.end();
 });
 
-// Do addTodo tests here
 tape(' Add New toDo to Todos List ', function(t) {
-	var obj=  {
-    id: 2,
-    description: ' avocados',
-    done: false,
-  };
-    t.deepEqual(logic.addTodo(testArr, obj), [
-  {
-    id: 0,
-    description: 'smash avocados',
-    done: true,
-  },
-  {
-    id: 1,
-    description: 'make coffee',
-    done: false,
-  },
-  {
-    id: 2,
-    description: ' avocados',
-    done: false,
-  }
-],
-      "should returns array with a new todo appended");
-      t.end();
+    let notes = [];
+    notes = logic.addTodo(notes, "Note text");
+    let result = [
+        {
+            id: 1,
+            description: 'Note text',
+            done: false,
+        },
+    ];
+    t.deepEqual(notes,result, "results are not equal");
+    t.end();
 })
-
-
-
-// end addTodo tests here
-
-// Do markTodo tests here
-
-
-
-
-// end markTodo tests here
-
-// Do deleteTodo tests here
-
-
-
-
-// end deleteTodo tests
