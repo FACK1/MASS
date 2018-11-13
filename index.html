@@ -4,16 +4,36 @@
     <meta charset="utf-8">
     <title>tdd todo</title>
     <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-<div id = "todo-container">
-    <ul>
-    </ul>
-</div>
-<form id="add-todo">
-    <input type="text" name="description" value="">
-    <input type="submit" name="" value="Submit">
-</form>
+
+	<header>
+		<h1>MASS ToDoS</h1>
+	</header>
+	<hr>
+	<!-- section 1 -->
+	<section id="first">
+		<div>
+			<input type="text" name="newtask" placeholder="Add New Task ">
+			<button><i class="fas fa-plus"></i></button>
+		</div>
+		<div>
+			
+		</div>
+	</section> 
+	<hr>
+	<!-- sesction 2 -->
+	<section id="tasks">
+		<div class="task">
+			<!-- <i class="fas fa-check-circle"></i> -->
+			<i class="far fa-circle"></i>
+			<h2>Task 1</h2>
+			<i class="fas fa-pencil-alt"></i>
+			<i class="fas fa-trash-alt"></i>
+		</div>
+	</section>
 </body>
 <script type="text/javascript" src = "./logic.js"></script>
 <script type="text/javascript" src = "./dom.js"></script>
