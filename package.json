@@ -1,0 +1,23 @@
+{
+  "name": "mass",
+  "version": "1.0.0",
+  "description": "week3 project repository - FACK1",
+  "main": "dom.js",
+  "scripts": {
+    "test": "tape ./test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACK1/MASS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACK1/MASS/issues"
+  },
+  "homepage": "https://github.com/FACK1/MASS#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
