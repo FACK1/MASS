@@ -9,7 +9,7 @@ var todoFunctions = {
         var idCounter = 0;
 
         function incrementCounter() {
-            return (idCounter += 1);
+            return ++idCounter;
         }
 
         return incrementCounter;
@@ -18,9 +18,7 @@ var todoFunctions = {
     //cloneArrayOfObjects will create a copy of the todos array
     //changes to the new array don't affect the original
     cloneArrayOfObjects: function(todos) {
-        return todos.map(function(todo){
-            return JSON.parse(JSON.stringify(todo));
-        });
+        return JSON.parse(JSON.stringify(todos));
     },
 
     addTodo: function(todos, newTodo) {
@@ -28,20 +26,20 @@ var todoFunctions = {
         // returns a new array, it should contain todos with the newTodo added to the end.
         // add an id to the newTodo. You can use the generateId function to create an id.
         // hint: array.concat
-        return todos.concat(newTodo);
+        let obj ={
+            id: this.generateId(),
+            description: newTodo,
+            done: false,
+        };
+        let final = this.cloneArrayOfObjects(todos);
+        final.push(obj);
+        return final;
     },
     deleteTodo: function(todos, idToDelete) {
-        // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-        // return a new array, this should not contain any todo with an id of idToDelete
-        // hint: array.filter
-        return todos.filter(x=>x.id !== idToDelete);
+        return this.cloneArrayOfObjects(todos).filter(x=>x.id !== idToDelete);
     },
     markTodo: function(todos, idToMark) {
-        // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
-        // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-        // this element will have its done value toggled
-        // hint: array.map
-        return todos.map(x=>{
+        return this.cloneArrayOfObjects(todos).map(x=>{
             if(x.id === idToMark){
                 x.done = !x.done;
             }
