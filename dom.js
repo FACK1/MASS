@@ -5,6 +5,7 @@
     // This is the dom node where we will keep our todo
     var container = document.getElementById('todo-container');
     var addTodoForm = document.getElementById('add-todo');
+    var noteTemplate = document.getElementById('note-template').innerHTML;
 
     var state = [
         { id: -3, description: 'first todo' },
@@ -12,9 +13,11 @@
         { id: -1, description: 'third todo' },
     ]; // this is our initial todoList
 
-    // This function takes a todo, it returns the DOM node representing that todo
+    // This function takes a to-do, it returns the DOM node representing that todo
     var createTodoNode = function(todo) {
-        var todoNode = document.createElement('li');
+        var todoNode = document.createElement('div');
+        todoNode.setAttribute('class', 'task');
+        todoNode.innerHTML();
         // you will need to use addEventListener
 
         // add span holding description
