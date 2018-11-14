@@ -95,7 +95,6 @@
             }
             else {
                 sec1h.setAttribute('contenteditable', 'true');
-                //TODO: CHANGE COLOR.
                 sec1h.style.backgroundColor = '#9a314d';
                 sec1h.style.color = 'white';
             }

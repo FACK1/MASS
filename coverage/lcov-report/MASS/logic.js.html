@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>18/25</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/6</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">77.27% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/22</span>
+        <span class='fraction'>16/16</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -114,7 +114,9 @@
 69
 70
 71
-72</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+72
+73
+74</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,6 +157,7 @@
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-yes">4×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -168,13 +171,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,7 +179,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Part 1. Fill in any missing parts of the todoFunction object!
 // you can access these on todo.todoFunctions
@@ -225,6 +229,7 @@ var todoFunctions = {
     deleteTodo: function(todos, idToDelete) {
         return this.cloneArrayOfObjects(todos).filter(x=&gt;x.id !== idToDelete);
     },
+    
     markTodo: function(todos, idToMark) {
         return this.cloneArrayOfObjects(todos).map(x=&gt;{
             if(x.id === idToMark){
@@ -234,19 +239,20 @@ var todoFunctions = {
         });
 &nbsp;
     },
-    sortTodos: <span class="fstat-no" title="function not covered" >function(todos, sortFunction) {</span>
+/*
+    sortTodos: function(todos, sortFunction) {
         // stretch goal! Do this last
         // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
         // sortFunction will have same signature as the sort function in array.sort
         // hint: array.slice, array.sort
-<span class="cstat-no" title="statement not covered" >        var sortedTodos = todos.concat([]);</span>
-<span class="cstat-no" title="statement not covered" >        if(sortFunction === 'desc'){</span>
-<span class="cstat-no" title="statement not covered" >            sortedTodos.sort((a,b) =&gt; <span class="cstat-no" title="statement not covered" >a.id - b.id)</span>;</span>
+        var sortedTodos = todos.concat([]);
+        if(sortFunction === 'desc'){
+            sortedTodos = sortedTodos.sort(function(a,b) { return a.id - b.id; });
         }else {
-<span class="cstat-no" title="statement not covered" >            sortedTodos.sort((a,b) =&gt; <span class="cstat-no" title="statement not covered" >b.id - a.id)</span>;</span>
+            sortedTodos = sortedTodos.sort(function(a,b){ return b.id - a.id; });
         }
-<span class="cstat-no" title="statement not covered" >        return sortedTodos;</span>
-    },
+        return sortedTodos;
+    },*/
 };
 &nbsp;
 &nbsp;
@@ -254,15 +260,15 @@ var todoFunctions = {
 // The answer has something to do with needing to run code both in the browser and in Node.js
 // See this article for more details:
 // http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined') {
+//if (typeof module !== 'undefined') {
     module.exports = todoFunctions;
-}</pre></td></tr>
+//}</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 14 2018 16:02:10 GMT+0200 (Israel Standard Time)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 14 2018 22:07:11 GMT+0200 (Israel Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
