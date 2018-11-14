@@ -1,5 +1,4 @@
-# MASS
-# MAAS - ToDoS
+ # MAAS - ToDoS
 An App Allow users to making List of His Tasks Sequentially , and هdentify which has been achieved and which remain from the tasks , As well as its ability to modify or delete tasks .
 
 # User journey 
