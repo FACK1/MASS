@@ -52,8 +52,13 @@ var todoFunctions = {
         // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
         // sortFunction will have same signature as the sort function in array.sort
         // hint: array.slice, array.sort
-        
-
+        var sortedTodos = todos.concat([]);
+        if(sortFunction === 'desc'){
+            sortedTodos.sort((a,b) => a.id - b.id);
+        }else {
+            sortedTodos.sort((a,b) => b.id - a.id);
+        }
+        return sortedTodos;
     },
 };
 

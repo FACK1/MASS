@@ -4,7 +4,8 @@
   "description": "week3 project repository - FACK1",
   "main": "dom.js",
   "scripts": {
-    "test": "tape ./test.js | tap-spec"
+    "test": "tape ./test.js | tap-spec",
+    "istanbul": "istanbul cover tape test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,7 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "istanbul": "^0.4.5"
+  }
 }
