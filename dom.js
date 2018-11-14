@@ -78,8 +78,28 @@
             update(newState);
         });
         //todoNode.appendChild(deleteButtonNode);
-
         // add markTodo button
+        sec1i.addEventListener('click', event => {
+            var index = getNodeIndex(sec1i);
+            var newState = state.concat([]);
+            newState[index].done = !newState[index].done;
+            update(newState);
+        });
+
+        sec2b1.addEventListener('click', event =>{
+            if(sec1h.getAttribute('contenteditable') == 'true'){
+                var index = getNodeIndex(sec2b1);
+                var newState = state.concat([]);
+                newState[index].description = sec1h.innerText;
+                update(newState);
+            }
+            else {
+                sec1h.setAttribute('contenteditable', 'true');
+                //TODO: CHANGE COLOR.
+                sec1h.style.backgroundColor = '#9a314d';
+                sec1h.style.color = 'white';
+            }
+        });
 
         // add classes for css
 
@@ -124,6 +144,23 @@
         // you may want to add a class for css
         container.replaceChild(todoListNode, container.firstChild);
     };
+
+
+
+    var getNodeIndex = function (sec1i) {
+        var parent = sec1i.parentNode.parentNode.parentNode;
+        var children = parent.childNodes;
+        for (var i=0; i < children.length ; i++){
+            if(children[i] === sec1i.parentNode.parentNode){
+                return i;
+            }
+        }
+    };
+
+
+
+
+
 
     if (container) renderState(state);
 })();
