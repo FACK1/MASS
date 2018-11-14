@@ -1,6 +1,6 @@
  # MAAS - ToDoS
  
- Website histed [Here](https://fack1.github.io/MASS/index.html)
+ Website hosted [Here](https://fack1.github.io/MASS/index.html)
  
 An application allow users to making list of his tasks sequentially , and identify which has been achieved and which remain from the tasks , As well as its ability to modify or delete tasks .
 
