@@ -70,4 +70,34 @@ tape(' Add New toDo to Todos List ', function(t) {
     ];
     t.deepEqual(notes,result, "results are not equal");
     t.end();
-})
+});
+/*
+tape('Test Sort', function (t) {
+    let testArray = [
+        {
+            id: 0,
+            description: 'smash avocados',
+            done: true,
+        },
+        {
+            id: 1,
+            description: 'make coffee',
+            done: false,
+        }
+    ];
+    let result = [
+        {
+            id: 1,
+            description: 'make coffee',
+            done: false,
+        },
+        {
+            id: 0,
+            description: 'smash avocados',
+            done: false,
+        }
+    ];
+    t.deepEqual(logic.sortTodos(testArray, 'desc'), result, 'Todo list should return same list but sorted desc');
+    t.end();
+});
+*/

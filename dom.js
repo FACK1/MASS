@@ -95,7 +95,6 @@
             }
             else {
                 sec1h.setAttribute('contenteditable', 'true');
-                //TODO: CHANGE COLOR.
                 sec1h.style.backgroundColor = '#9a314d';
                 sec1h.style.color = 'white';
             }
@@ -146,7 +145,6 @@
     };
 
 
-
     var getNodeIndex = function (sec1i) {
         var parent = sec1i.parentNode.parentNode.parentNode;
         var children = parent.childNodes;
@@ -157,9 +155,18 @@
         }
     };
 
-
-
-
+    document.getElementById('sort-btn').addEventListener('click', target =>{
+        //var sortedState = state.concat([]);
+        var sortedState;
+        if(target.style.backgroundColor === '#9a314d'){
+            sortedState = todoFunctions.sortTodos(state, 'asc');
+            document.getElementById("sort-btn").style.backgroundColor = 'gray';
+        }else {
+            sortedState = todoFunctions.sortTodos(state, 'desc');
+            document.getElementById("sort-btn").style.backgroundColor = "#9a314d";
+        }
+        update(sortedState);
+    });
 
 
     if (container) renderState(state);
