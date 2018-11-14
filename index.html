@@ -16,9 +16,9 @@
       <!-- section 1 -->
       <section id="control-section">
          <div class="add">
-            <form id="add-todo">
-               <input type="text" name="new-task" placeholder=" Add New Task ">
-               <button><i class="fas fa-plus"></i></button>
+            <form id="add-todo" action="logic.js">
+               <input value="" id="todo-text" type="text" name="new-task" placeholder=" Add New Task ">
+               <button id="add-btn" type="submit"><i class="fas fa-plus"></i></button>
             </form><link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
          </div>
          <div class="sort">
@@ -27,18 +27,11 @@
       <hr>
       <!-- sesction 2 -->
       <section id="todo-container">
-         <!-- <script type="text/template" id="task-template"> -->
-         <div class="task">
-            <div class="sec1">
-               <!-- <i class="fas fa-check-circle"></i> -->
-               <i class="far fa-circle btn-done"></i>
-               <h2 class ="view-task"> Task 1</h2>
-            </div>
-            <div class="sec2">
-               <button><i class="fas fa-pencil-alt edit btn-edit"></i></button>
-               <button><i class="fas fa-trash-alt delete btn-delete"></i></button>
-            </div>
+         <div id="list-container">
+
          </div>
+         <!-- <script type="text/template" id="task-template"> -->
+
         <!-- </script>  -->
       </section>
       <footer>
