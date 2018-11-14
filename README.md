@@ -1,5 +1,5 @@
  # MAAS - ToDoS
-An App Allow users to making List of His Tasks Sequentially , and identify which has been achieved and which remain from the tasks , As well as its ability to modify or delete tasks .
+An Application  Allow users to making List of His Tasks Sequentially , and identify which has been achieved and which remain from the tasks , As well as its ability to modify or delete tasks .
 
 # User journey 
 In Our App You can Check your task to make your Daily tasks more easy to accieved it , firstly you can add  your task sequentially , to see it in list in the same page , if you finish the task you can click in circle beside it to make it Done , if you change your task and you dont want it in your task  you can delete it from trash icon , or edit it from pencil icon.
@@ -21,9 +21,9 @@ In Our App You can Check your task to make your Daily tasks more easy to accieve
 
 
 # Team Member:
-- Mohammad Al-Sharif
-- Abd-Alhamed 
-- Shaimaa Azmi
-- Sama Amro 
+- [Mohammad Al-Sharif](https://github.com/mhmdtshref)
+- [Abd-Alhamed ](https://github.com/abozanona)
+- [Shaimaa Azmi](https://github.com/shaima96)
+- [Sama Amro](https://github.com/samaamro20)
 
 
