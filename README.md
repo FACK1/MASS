@@ -16,7 +16,7 @@ In Our App You can Check your task to make your Daily tasks more easy to accieve
 
 
 - HTML structure :
-  Have a page contain a title for our app with background , then will find a box to enter your task in the same line have a       button to add the task in the list of tasks , then you will see a place for your tasks , with a cilcle to check your task if   you done it or let it empty if it sill not finished , beside the task you see tow icon if you want to edit the task click on   pencil icon , and if you want to delete the task click in trash icon , finaly we have a footer to add a copyright for MASS     Team and links for Help , Privacy and Uses Policy . 
+  Have a page contain a title for our app with background , then will find a box to enter your task in the same line have a       button to add the task in the list of tasks , then you will see a place for your tasks , with a cilcle to check your task if   you done it or let it empty if it still not finished , beside the task you see edit icon if you want to edit the task click on   pencil icon , and if you want to delete the task click in trash icon , finaly we have a footer to add a copyright for MASS     Team and links for Help , Privacy and Uses Policy . 
 
 
 
