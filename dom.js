@@ -33,11 +33,13 @@
         var sec2 = document.createElement('div');
         sec2.setAttribute('class', 'sec2');
         var sec2b1 = document.createElement('button');
+        sec2b1.setAttribute('name', 'edit-button');
         var sec2b1i = document.createElement('i');
         sec2b1i.setAttribute('class', 'fas fa-pencil-alt edit btn-edit');
         sec2b1.appendChild(sec2b1i);
         sec2.appendChild(sec2b1);
         var sec2b2 = document.createElement('button');
+        sec2b2.setAttribute('name', 'delete-button');
         var sec2b2i = document.createElement('i');
         sec2b2i.setAttribute('class', 'fas fa-trash-alt delete btn-delete');
         sec2b2.appendChild(sec2b2i);
@@ -97,6 +99,7 @@
                 sec1h.setAttribute('contenteditable', 'true');
                 sec1h.style.backgroundColor = '#9a314d';
                 sec1h.style.color = 'white';
+                sec1h.focus();
             }
         });
 
