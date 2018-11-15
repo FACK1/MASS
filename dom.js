@@ -33,13 +33,13 @@
         var rightDiv = document.createElement('div');
         rightDiv.setAttribute('class', 'sec2');
         var editButton = document.createElement('button');
-        editButton.setAttribute('name', 'edit-button');
+        editButton.setAttribute('name', 'editbutton');
         var editSign = document.createElement('i');
         editSign.setAttribute('class', 'fas fa-pencil-alt edit btn-edit');
         editButton.appendChild(editSign);
         rightDiv.appendChild(editButton);
         var deleteButton = document.createElement('button');
-        deleteButton.setAttribute('name', 'delete-button');
+        deleteButton.setAttribute('name', 'deletebutton');
         var deleteSign = document.createElement('i');
         deleteSign.setAttribute('class', 'fas fa-trash-alt delete btn-delete');
         deleteButton.appendChild(deleteSign);
