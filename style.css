@@ -58,7 +58,7 @@ header{
 	padding-top: 48px;
 	font-size: 25pt;
 	color: #9a314d;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Galada', cursive;
 
 }
 h1 i{
@@ -111,7 +111,9 @@ input{
 	height: 40px;
 	border-radius: 5px;
 	padding: 5px;
-	padding-top:10px; 
+	padding-top:10px;
+	border-right: 1px solid #9a314d;;
+	border-left: 1px solid #9a314d;;
 }
 
 

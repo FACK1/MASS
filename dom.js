@@ -18,117 +18,77 @@
         var todoNode = document.createElement('div');
         todoNode.setAttribute('class', 'task');
         //start add sec1:
-        var sec1 = document.createElement('div');
-        sec1.setAttribute('class', 'sec1');
-        var sec1i = document.createElement('i');
-        sec1i.setAttribute('class', todo.done ? 'fas fa-check-circle' : 'far fa-circle btn-done');
-        sec1.appendChild(sec1i);
-        var sec1h = document.createElement('h2');
-        sec1h.setAttribute('class', 'view-task');
-        sec1h.innerText = todo.description;
-        sec1.appendChild(sec1h);
-        todoNode.appendChild(sec1);
+        var leftDiv = document.createElement('div');
+        leftDiv.setAttribute('class', 'sec1');
+        var checkedButton = document.createElement('i');
+        checkedButton.setAttribute('class', todo.done ? 'fas fa-check-circle' : 'far fa-circle btn-done');
+        leftDiv.appendChild(checkedButton);
+        var taskTitle = document.createElement('h2');
+        taskTitle.setAttribute('class', 'view-task');
+        taskTitle.innerText = todo.description;
+        leftDiv.appendChild(taskTitle);
+        todoNode.appendChild(leftDiv);
         //End add sec1.
         //sec2 start:
-        var sec2 = document.createElement('div');
-        sec2.setAttribute('class', 'sec2');
-        var sec2b1 = document.createElement('button');
-        sec2b1.setAttribute('name', 'edit-button');
-        var sec2b1i = document.createElement('i');
-        sec2b1i.setAttribute('class', 'fas fa-pencil-alt edit btn-edit');
-        sec2b1.appendChild(sec2b1i);
-        sec2.appendChild(sec2b1);
-        var sec2b2 = document.createElement('button');
-        sec2b2.setAttribute('name', 'delete-button');
-        var sec2b2i = document.createElement('i');
-        sec2b2i.setAttribute('class', 'fas fa-trash-alt delete btn-delete');
-        sec2b2.appendChild(sec2b2i);
-        sec2.appendChild(sec2b2);
-        todoNode.appendChild(sec2);
+        var rightDiv = document.createElement('div');
+        rightDiv.setAttribute('class', 'sec2');
+        var editButton = document.createElement('button');
+        editButton.setAttribute('name', 'edit-button');
+        var editSign = document.createElement('i');
+        editSign.setAttribute('class', 'fas fa-pencil-alt edit btn-edit');
+        editButton.appendChild(editSign);
+        rightDiv.appendChild(editButton);
+        var deleteButton = document.createElement('button');
+        deleteButton.setAttribute('name', 'delete-button');
+        var deleteSign = document.createElement('i');
+        deleteSign.setAttribute('class', 'fas fa-trash-alt delete btn-delete');
+        deleteButton.appendChild(deleteSign);
+        rightDiv.appendChild(deleteButton);
+        todoNode.appendChild(rightDiv);
         //sec2 end
 
-        /*
-        if(todo.done){
-            todoNode.innerHTML = "            <div class='sec1'>" +
-                "               <i class='fas fa-check-circle'></i>" +
-                "               <h2 class ='view-task'> " + todo.description + "</h2>" +
-                "            </div>" +
-                "            <div class='sec2'>" +
-                "               <button><i class='fas fa-pencil-alt edit btn-edit'></i></button>" +
-                "               <button><i class='fas fa-trash-alt delete btn-delete'></i></button>" +
-                "            </div>";
-        }else {
-            todoNode.innerHTML = "            <div class='sec1'>" +
-                "               <i class='far fa-circle btn-done'></i>" +
-                "               <h2 class ='view-task'> " + todo.description + "</h2>" +
-                "            </div>" +
-                "            <div class='sec2'>" +
-                "               <button><i class='fas fa-pencil-alt edit btn-edit'></i></button>" +
-                "               <button><i class='fas fa-trash-alt delete btn-delete'></i></button>" +
-                "            </div>";
-        }
-        */
-        //return todoNode;
-        // you will need to use addEventListener
-
-        // add span holding description
-
         // this adds the delete button
-        //var deleteButtonNode = document.createElement('button');
-        sec2b2.addEventListener('click', function(event) {
+        deleteButton.addEventListener('click', function(event) {
             var newState = todoFunctions.deleteTodo(state, todo.id);
             update(newState);
         });
-        //todoNode.appendChild(deleteButtonNode);
         // add markTodo button
-        sec1i.addEventListener('click', event => {
-            var index = getNodeIndex(sec1i);
+        checkedButton.addEventListener('click', event => {
+            var index = getNodeIndex(checkedButton);
             var newState = state.concat([]);
             newState[index].done = !newState[index].done;
             update(newState);
         });
 
-        sec2b1.addEventListener('click', event =>{
-            if(sec1h.getAttribute('contenteditable') == 'true'){
-                var index = getNodeIndex(sec2b1);
+        editButton.addEventListener('click', event =>{
+            if(taskTitle.getAttribute('contenteditable') == 'true'){
+                var index = getNodeIndex(editButton);
                 var newState = state.concat([]);
-                newState[index].description = sec1h.innerText;
+                newState[index].description = taskTitle.innerText;
                 update(newState);
             }
             else {
-                sec1h.setAttribute('contenteditable', 'true');
-                sec1h.style.backgroundColor = '#9a314d';
-                sec1h.style.color = 'white';
-                sec1h.focus();
+                taskTitle.setAttribute('contenteditable', 'true');
+                taskTitle.style.backgroundColor = '#9a314d';
+                taskTitle.style.color = 'white';
+                taskTitle.focus();
             }
         });
 
-        // add classes for css
 
         return todoNode;
     };
 
-    // bind create todo form
     if (addTodoForm) {
         addTodoForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-            // what does event.preventDefault do?
-            // what is inside event.target?
              var newToDo = document.getElementById("todo-text").value;
-             //console.log(newToDo);
-            var description = '?'; // event.target ....
-            //console.log(state);
+            var description = '?';
             update(todoFunctions.addTodo(state, newToDo));
             addTodoForm.reset();
-            //console.log(state);
-            // hint: todoFunctions.addTodo
-            //var newState = []; // ?? change this!
-            //update(newState);
         });
     }
 
-    // you should not need to change this function
     var update = function(newState) {
         state = newState;
         renderState(state);
