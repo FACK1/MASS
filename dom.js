@@ -117,6 +117,7 @@
             var description = '?'; // event.target ....
             //console.log(state);
             update(todoFunctions.addTodo(state, newToDo));
+            addTodoForm.reset();
             //console.log(state);
             // hint: todoFunctions.addTodo
             //var newState = []; // ?? change this!
