@@ -72,15 +72,17 @@ h1 i{
 	width: 100%;
 }
 .add form{
-	width: 50%;
+	width: 60%;
+	display: flex;
 	margin-right:25% ;
-	margin-left: 25%;
+	margin-left: 15%;
 }
 input{
 	width: 70%;
 	border-radius: 5px;
 	font-size: 15pt;
 	height: 30px;
+	display: inline-block;
 }
 .add button{
 	width: 17%;
@@ -89,6 +91,8 @@ input{
 	height: 36px;
 	color: #e0e0e0;
     background-color: #9a314d;
+	display: inline-block;
+	margin-left: 5px;
 }
 .sec2 button{
 	border-radius: 20px;
@@ -128,40 +132,7 @@ input{
 .sec1 i{
 	margin-right: 5px;
 }
-/*footer*/
-footer{
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
- nav{
-     overflow: hidden;
-     background-color: #9a314d;
-     padding: 10px;
-}
 
- #copyright{
-     text-decoration: none;
-     text-align: center;
-     float: left;
-}
- nav a{
-     float: right;
-     text-decoration: none;
-     color: #f2f2f2;
-     text-align: center;
-     font-size:15px;
-     border-radius: 4px;
-     padding: 5px;
-}
- nav a:hover {
-     background-color: #ddd;
-     color: black;
-}
- nav a.active {
-     background-color: #4CAF50;
-     color: white;
-}
 #todo-container{
 	overflow: auto;
 }
@@ -174,4 +145,12 @@ footer{
 	color: #e0e0e0;
 	border-radius: 5px;
 	font-size: 13pt;
+}
+
+label{
+	color: #9a314d;
+	font-size: 15pt;
+	display: inline-block;
+	padding: 9px;
+	font-family: 'Open Sans', sans-serif;
 }

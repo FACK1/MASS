@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
    <head>
       <meta charset="utf-8">
       <title>tdd todo</title>
@@ -17,32 +17,20 @@
       <section id="control-section">
          <div class="add">
             <form id="add-todo" action="logic.js">
-               <input value="" id="todo-text" type="text" name="new-task" placeholder=" Add New Task ">
-               <button id="add-btn" type="submit"><i class="fas fa-plus"></i></button>
+               <label> Task </label>
+               <input value="" id="todo-text" type="text" name="new-task" placeholder=" Add New Task " required>
+               <button id="add-btn" type="submit" name="add-button"><i class="fas fa-plus" ></i></button>
             </form><link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
          </div>
          <div class="sort">
-            <button id="sort-btn"><i class="fas fa-sort-amount-down"></i> Sort</button>
+            <button id="sort-btn" name="sort-button"><i class="fas fa-sort-amount-down"></i> Sort</button>
          </div>
       </section>
       <hr>
       <!-- sesction 2 -->
       <section id="todo-container">
-         <div id="list-container">
 
-         </div>
-         <!-- <script type="text/template" id="task-template"> -->
-
-        <!-- </script>  -->
       </section>
-      <footer>
-      	<nav>
-            <a id="copyright" href="#">Copyright © by MASS Team </a>
-            <a href="#">Help |</a>
-            <a href="#">Privacy | </a>
-            <a href="#">Uses Policy | </a>
-         </nav>
-      </footer>
    </body>
    <script type="text/javascript" src = "./logic.js"></script>
    <script type="text/javascript" src = "./dom.js"></script>
